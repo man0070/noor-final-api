@@ -1,0 +1,22 @@
+{
+  "family": "noor-final-api-task",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::895152645840:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "noor-final-api-container",
+      "image": "895152645840.dkr.ecr.us-east-1.amazonaws.com/noor-final-api:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512"
+}
+
